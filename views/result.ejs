@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Result</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Results for "<%= query %>":</h1>
+        <% if(result && result.zips) { %>
+            <p><strong>Place:</strong>
+                <%= result.place %>
+            </p>
+            <p><strong>Zip Codes:</strong>
+                <%= result.zips.join(", ") %></p>
+    <% } else { %>
+      <p>No results found for " <%=query %>".
+            </p>
+            <% } %>
+                <a href="/">New search</a>
+
+    </div>
+</body>
+
+</html>
